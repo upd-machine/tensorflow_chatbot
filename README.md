@@ -3,8 +3,9 @@ Tensorflow Chatbot Demo by @Sirajology on [Youtube](https://youtu.be/SJDEOWLHYVo
 
 Overview
 ============
-This is the full code for 'How to Make an Amazing Tensorflow Chatbot Easily' by @Sirajology on [Youtube](https://youtu.be/SJDEOWLHYVo). In this demo code, we implement Tensorflows [Sequence to Sequence](https://www.tensorflow.org/versions/r0.12/tutorials/seq2seq/index.html) model to train a
-chatbot on the [Cornell Movie Dialogue dataset](https://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html). After training for a few hours, the bot is able to hold a fun conversation.
+- This is the full code for 'How to Make an Amazing Tensorflow Chatbot Easily' by @Sirajology on [Youtube](https://youtu.be/SJDEOWLHYVo). 
+- In this demo code, we implement Tensorflows [Sequence to Sequence](https://www.tensorflow.org/versions/r0.12/tutorials/seq2seq/index.html) model to train a chatbot on the [Cornell Movie Dialogue dataset](https://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html). 
+- After training for a few hours, the bot is able to hold a fun conversation.
 
 
 Dependencies
@@ -16,6 +17,24 @@ Dependencies
 
 Use [pip](https://pypi.python.org/pypi/pip) to install any missing dependencies
 
+```
+pip3 install numpy
+pip3 install scipy
+pip3 install six
+pip3 install tensorflow 
+
+pip3 install -r ui/requirements.txt
+
+# https://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html
+mkdir data
+cd data
+wget http://www.cs.cornell.edu/~cristian/data/cornell_movie_dialogs_corpus.zip
+unzip cornell_movie_dialogs_corpus.zip
+mv "cornell movie-dialogs corpus"/* .
+
+#https://github.com/llSourcell/tensorflow_chatbot/issues/55
+python3.7 prepare_data.py
+```
 
 Usage
 ===========
@@ -26,7 +45,7 @@ To train the bot, edit the `seq2seq.ini` file so that mode is set to train like 
 
 then run the code like so
 
-``python execute.py``
+``python3.7 execute.py``
 
 To test the bot during or after training, edit the `seq2seq.ini` file so that mode is set to test like so
 
@@ -34,7 +53,7 @@ To test the bot during or after training, edit the `seq2seq.ini` file so that mo
 
 then run the code like so
 
-``python execute.py``
+``python3.7 execute.py``
 
 
 Challenge
