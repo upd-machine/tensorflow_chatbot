@@ -18,12 +18,12 @@ Dependencies
 Use [pip](https://pypi.python.org/pypi/pip) to install any missing dependencies
 
 ```
-pip3 install numpy
-pip3 install scipy
-pip3 install six
-pip3 install tensorflow 
+pip install numpy
+pip install scipy
+pip install six
+pip install tensorflow==1.1.0
 
-pip3 install -r ui/requirements.txt
+pip install -r ui/requirements.txt
 
 # https://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html
 mkdir data
@@ -34,6 +34,38 @@ mv "cornell movie-dialogs corpus"/* .
 
 #https://github.com/llSourcell/tensorflow_chatbot/issues/55
 python3.7 prepare_data.py
+
+# outputs
+λ ll data/*.enc
+8630599174 -rw-r--r--  1 a1353612  184630988   1.6M Apr 13 16:25 data/test.enc
+8630599172 -rw-r--r--  1 a1353612  184630988   5.9M Apr 13 16:25 data/train.enc
+
+λ tail -f data/*.enc
+
+==> data/test.enc <==
+Ready for Fuchsmachen???
+Three minutes to go!
+Will you hear "Last Post", Sir?
+You afeared of the Zulus then, Quartermaster?
+Why don 't the Zulus attack?
+Oh... indeed. Crealock, we should see that Colonel Dumford has an Officer for his hard riders. Perhaps a subaltern from the Twenty Fourth.
+You intended to bring your reserves across the river?
+Colonel Durnford... William Vereker. I hear you 've been seeking Officers?
+Your orders, Mr Vereker?
+Well I assure you, Sir, I have no desire to create difficulties. 45
+
+==> data/train.enc <==
+Yes?
+Splendid site, Crealock, splendil I want to establish Camp here immediately.
+Stuart?
+How quickly can you move your artillery forward?
+Well, fed or hungry, Pulleine wants them in position immediately. .
+Lighting COGHILL' 5 cigar: Our good Colonel Dumford scored quite a coup with the Sikali Horse.
+Do you think she might be interested in  someone?
+Well that one. The one who keeps looking at me.
+Choose your targets men. That's right Watch those markers. 55
+Lord Chelmsford seems to want me to stay back with my Basutos.
+
 ```
 
 Usage
@@ -45,7 +77,10 @@ To train the bot, edit the `seq2seq.ini` file so that mode is set to train like 
 
 then run the code like so
 
-``python3.7 execute.py``
+```
+python execute.py
+
+```
 
 To test the bot during or after training, edit the `seq2seq.ini` file so that mode is set to test like so
 
@@ -53,7 +88,7 @@ To test the bot during or after training, edit the `seq2seq.ini` file so that mo
 
 then run the code like so
 
-``python3.7 execute.py``
+``python execute.py``
 
 
 Challenge
