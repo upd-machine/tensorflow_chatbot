@@ -21,7 +21,7 @@ Use [pip](https://pypi.python.org/pypi/pip) to install any missing dependencies
 pip install numpy
 pip install scipy
 pip install six
-pip install tensorflow==1.1.0
+pip install tensorflow==0.12.1
 
 pip install -r ui/requirements.txt
 
@@ -33,7 +33,7 @@ unzip cornell_movie_dialogs_corpus.zip
 mv "cornell movie-dialogs corpus"/* .
 
 #https://github.com/llSourcell/tensorflow_chatbot/issues/55
-python3.7 prepare_data.py
+python prepare_data.py
 
 # outputs
 λ ll data/*.enc

@@ -56,3 +56,6 @@ Traceback (most recent call last):
     single_cell = tf.nn.rnn_cell.GRUCell(size)
 AttributeError: 'module' object has no attribute 'rnn_cell'
 ```
+
+fix: pip install tensorflow==0.12.1
+
